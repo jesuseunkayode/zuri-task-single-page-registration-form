@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+/* pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@ body {
 h1 {
     font-size: 40px;
     color: white;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .learn-to-code-para-text {
@@ -39,7 +41,7 @@ h1 {
 
 #register-form {
     background-color: white;
-    height: 45vh;
+    height: 70vh;
     padding-left: 45px;
     padding-top: 25px;
     margin: 10px 0 10px 0;
@@ -53,7 +55,7 @@ h1 {
 input[type=text], input[type=email], input[type=password] {
     padding: 10px;
     width: 80%;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-radius: 5px;
     outline: none;
     border: 1px solid  hsl(246, 25%, 77%);
@@ -86,13 +88,57 @@ input[type=text], input[type=email], input[type=password] {
     padding-top: 10px;
 }
 
-span {
+#terms {
     color: hsl(0, 100%, 74%);
 }
 
-input:invalid {
-    border: 1px solid hsl(246, 25%, 77%);
+.input-control #first-name-error {
+     position: absolute;
+     bottom: 460px;
+     right: 350px;
+     font-size: 12px;
+     color: hsl(0, 100%, 74%);
+     
 }
+
+.input-control #last-name-error {
+    position: absolute;
+    bottom: 400px;
+    right: 350px;
+    font-size: 12px;
+    color: hsl(0, 100%, 74%);
+    
+}
+
+
+.input-control #email-error {
+    position: absolute;
+    bottom: 338px;
+    right: 350px;
+    font-size: 12px;
+    color: hsl(0, 100%, 74%);
+    
+}
+
+
+.input-control #password-error {
+    position: absolute;
+    bottom: 275px;
+    right: 350px;
+    font-size: 12px;
+    color: hsl(0, 100%, 74%);
+    
+}
+
+
+#sumit-error {
+     position: absolute;
+     bottom: 180px;
+     right: 380px;
+     font-size: 12px;
+    color: hsl(0, 100%, 74%);
+}
+
 
 
 

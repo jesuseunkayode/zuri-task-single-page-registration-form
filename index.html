@@ -18,17 +18,35 @@
         <section id="register">
             <p id="register-first-text"><strong>Try it free 7 days</strong> then $20/mo. thereafter.</p>
             <form action="#" id="register-form">
-              <label for="fname"></label><input id="fname" type="text" placeholder="Enter your first name" required maxlength="12" minlength="3"><br>
-              <label for="lname"></label><input id="lname" type="text" placeholder="Enter your last name" required maxlength="12" minlength="3"><br>
-              <label for="email"></label> <input id="email" type="email" placeholder="Enter your email address" required><br>
-              <label for="password"></label> <input id="password" type="password" placeholder="Enter your password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+              <section class="input-control">
+              <label for="fname"></label><input id="fname" type="text" placeholder="Enter your first name" onkeyup="validateFirstName()"><br>
+              <span id="first-name-error"></span>
+            </section>
+
+             <section class="input-control"> 
+              <label for="lname"></label><input id="lname" type="text" placeholder="Enter your last name" onkeyup="validateLastName()"><br>
+             <span id="last-name-error"></span>
+            </section>
+
+              <section class="input-control">
+              <label for="email"></label> <input id="email" type="email" placeholder="Enter your email address" onkeyup="validateEmail()"><br>
+               <span id="email-error"></span>
+            </section>
+
+              <section class="input-control">
+              <label for="password"></label> <input id="password" type="password" placeholder="Enter your password" onkeyup="validatePassword()"><br>
+              <span id="password-error"></span>
+             </section>
+       
               <button type="submit" id="claim">Claim your Free Trial</button>
-              <p id="register-second-text">By clicking the button, you agreeing to our <span>Terms and Serivces</span></p>
+              <p id="register-second-text">By clicking the button, you agreeing to our <span id="terms">Terms and Serivces</span></p>
+              <span id="sumit-error"> Please fix the above errors</span>
             </form>
         </section>
     </article>
     </main>
     <footer></footer>
-    
+    <script src="valid.js"></script>
 </body>
+
 </html>
