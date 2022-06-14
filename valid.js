@@ -18,6 +18,5 @@ function validateFirstName() {
         firstNameError.innerHTML = "great!";
         fname.style.border = "1px solid hsl(154, 59%, 51%)";
     }
-
         return true;
 }
