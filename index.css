@@ -117,7 +117,6 @@ input[type=text], input[type=email], input[type=password] {
     right: 350px;
     font-size: 12px;
     color: hsl(0, 100%, 74%);
-    
 }
 
 
@@ -136,8 +135,21 @@ input[type=text], input[type=email], input[type=password] {
      bottom: 180px;
      right: 380px;
      font-size: 12px;
-    color: hsl(0, 100%, 74%);
+     color: hsl(0, 100%, 74%);
 }
+
+
+
+.smoth {
+    position: absolute;
+    bottom: 480px;
+    right: 380px;
+    display: none;
+}
+
+
+
+
 
 
 
