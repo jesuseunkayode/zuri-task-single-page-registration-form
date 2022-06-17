@@ -161,7 +161,12 @@ input[type=text], input[type=email], input[type=password] {
     display: none;
 }
 
-
+#password-icon {
+    position: absolute;
+    bottom: 300px;
+    right:  350px;
+    display: none;
+}
 
 
 @media (min-width: 375px) and (max-width: 667px) {

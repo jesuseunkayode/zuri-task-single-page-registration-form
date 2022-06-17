@@ -48,7 +48,7 @@ let fName = id("fname"),
             failureIcon[2].style.display = "block";
             email.style.border = "1px solid hsl(0, 100%, 74%)";
         } else if (email.value.length <= 3) {
-            errorMsg[2].innerHTML = "Last Name must be more than 3 characters";
+            errorMsg[2].innerHTML = "Email must be more than 3 characters";
             failureIcon[2].style.display = "block";
             email.style.border = "1px solid hsl(0, 100%, 74%)";
         }
@@ -57,6 +57,21 @@ let fName = id("fname"),
             errorMsg[2].innerHTML = "";
             email.style.border = "1px solid hsl(154, 59%, 51%)";
         }
+
+        if(password.value === "") {
+            errorMsg[3].innerHTML = "Password can not be blank";
+            failureIcon[3].style.display = "block";
+            password.style.border = "1px solid hsl(0, 100%, 74%)";
+        } else if (password.value.length <= 3) {
+            errorMsg[3].innerHTML = "Password must be more than 3 characters";
+            failureIcon[3].style.display = "block";
+            password.style.border = "1px solid hsl(0, 100%, 74%)";
+        }
+
+        else {
+            errorMsg[3].innerHTML = "";
+            password.style.border = "1px solid hsl(154, 59%, 51%)";
+        } 
 
 
     
