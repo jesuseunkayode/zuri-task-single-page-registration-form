@@ -20,23 +20,26 @@
             <form action="#" id="register-form">
               <section class="input-control">
               <label for="fname"></label><input id="fname" type="text" placeholder="Enter your first name" onkeyup="validateFirstName()"><br>
-              <span id="first-name-error"></span>
-              <img class="smoth" src="images/icon-error.svg" alt="error image">
+              <span id="first-name-error" class="error"></span>
+              <img class="failure-icon" src="images/icon-error.svg" alt="error image">
             </section>
 
              <section class="input-control"> 
               <label for="lname"></label><input id="lname" type="text" placeholder="Enter your last name" onkeyup="validateLastName()"><br>
-             <span id="last-name-error"></span>
+             <span id="last-name-error" class="error"></span>
+             <img id="lastname-icon" class="failure-icon" src="images/icon-error.svg" alt="error image">
             </section>
 
               <section class="input-control">
               <label for="email"></label> <input id="email" type="email" placeholder="Enter your email address" onkeyup="validateEmail()"><br>
-               <span id="email-error"></span>
+               <span id="email-error" class="error"></span>
+               <img id="email-icon"  class="failure-icon" src="images/icon-error.svg" alt="error image">
             </section>
 
               <section class="input-control">
               <label for="password"></label> <input id="password" type="password" placeholder="Enter your password" onkeyup="validatePassword()"><br>
-              <span id="password-error"></span>
+              <span id="password-error" class="error"></span>
+              <img id="password-icon" class="failure-icon" src="images/icon-error.svg" alt="error image">
              </section>
        
               <button type="submit" id="claim">Claim your Free Trial</button>

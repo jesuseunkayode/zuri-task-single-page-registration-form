@@ -140,14 +140,19 @@ input[type=text], input[type=email], input[type=password] {
 
 
 
-.smoth {
+.failure-icon{
     position: absolute;
-    bottom: 480px;
-    right: 380px;
+    bottom: 485px;
+    right: 350px;
     display: none;
 }
 
-
+#lastname-icon {
+    position: absolute;
+    bottom: 425px;
+    right:  350px;
+    display: none;
+}
 
 
 

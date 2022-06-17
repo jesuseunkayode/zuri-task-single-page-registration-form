@@ -1,35 +1,53 @@
 // validation for input
 
-let firstNameError = document.querySelector('#first-name-error');
-let lastNameError = document.querySelector('#last-name-error');
-let emailError = document.querySelector('#email');
-let passwordError = document.querySelector('#password-error');
-let sumitError = document.querySelector('#sumit-error');
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
 
+let fName = id("fname"),
+     lName = id("lname"),
+     email = id("email"),
+     form = id("register-form"),
+     password = id("password"),
+     errorMsg = classes("error"),
+     failureIcon = classes("failure-icon");
 
+     form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if(fName.value === "") {
+            errorMsg[0].innerHTML = "First Name can not be blank";
+            failureIcon[0].style.display = "block";
+            fName.style.border = "1px solid hsl(0, 100%, 74%)";
+        } else if (fName.value.length <= 3) {
+            errorMsg[0].innerHTML = "First Name must be more than 3 characters";
+            failureIcon[0].style.display = "block";
+            fName.style.border = "1px solid hsl(0, 100%, 74%)";
+        }
 
-function validateFirstName() {
-    let firstName = document.querySelector("#fname").value;
-    let img = document.querySelector("smoth");
+        else {
+            errorMsg[0].innerHTML = "";
+            fName.style.border = "1px solid hsl(154, 59%, 51%)";
+        }
+     
+        if(lName.value === "") {
+            errorMsg[1].innerHTML = "Last Name can not be blank";
+            failureIcon[1].style.display = "block";
+            lName.style.border = "1px solid hsl(0, 100%, 74%)";
+        } else if (lName.value.length <= 3) {
+            errorMsg[1].innerHTML = "Last Name must be more than 3 characters";
+            failureIcon[1].style.display = "block";
+            lName.style.border = "1px solid hsl(0, 100%, 74%)";
+        }
 
-    if(firstName.length == 0) {
-       firstNameError.innerHTML = "Enter your real name";
-       fname.style.border = "1px solid hsl(0, 100%, 74%)";
-       img.style.display = "none";
-       setTimeout(function() {
-        img.style.display = 'block';
-       }, 2000);
-        return false;
-
-    }  else if(firstName.length <= 3) {
-        firstNameError.innerHTML = "Your name must be atleast 3 long";
-        fname.style.border = "1px solid hsl(0, 100%, 74%)";
-        return false;
-    }
+        else {
+            errorMsg[1].innerHTML = "";
+            lName.style.border = "1px solid hsl(154, 59%, 51%)";
+        }
     
-    else {
-        firstNameError.innerHTML = "Success";
-        fname.style.border = "1px solid hsl(154, 59%, 51%)";
-    }
-        return true;
-}
+    
+    })
+
+
+
+
+
+
