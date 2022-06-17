@@ -43,6 +43,22 @@ let fName = id("fname"),
             lName.style.border = "1px solid hsl(154, 59%, 51%)";
         }
     
+        if(email.value === "") {
+            errorMsg[2].innerHTML = "Email can not be blank";
+            failureIcon[2].style.display = "block";
+            email.style.border = "1px solid hsl(0, 100%, 74%)";
+        } else if (email.value.length <= 3) {
+            errorMsg[2].innerHTML = "Last Name must be more than 3 characters";
+            failureIcon[2].style.display = "block";
+            email.style.border = "1px solid hsl(0, 100%, 74%)";
+        }
+
+        else {
+            errorMsg[2].innerHTML = "";
+            email.style.border = "1px solid hsl(154, 59%, 51%)";
+        }
+
+
     
     })
 

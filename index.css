@@ -154,7 +154,12 @@ input[type=text], input[type=email], input[type=password] {
     display: none;
 }
 
-
+#email-icon {
+    position: absolute;
+    bottom: 362px;
+    right:  350px;
+    display: none;
+}
 
 
 
