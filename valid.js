@@ -1,6 +1,5 @@
 // validation for input
 
-
 let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 
@@ -14,7 +13,7 @@ let fName = id("fname"),
 
      form.addEventListener('submit', (event) => {
         event.preventDefault();
-        if(fName.value === "") {
+        if(fName.value.trim() === "") {
             errorMsg[0].innerHTML = "First Name can not be empty";
             failureIcon[0].style.display = "block";
             fName.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -30,7 +29,7 @@ let fName = id("fname"),
             fName.style.border = "1px solid hsl(154, 59%, 51%)";
         }
      
-        if(lName.value === "") {
+        if(lName.value.trim() === "") {
             errorMsg[1].innerHTML = "Last Name can not be empty";
             failureIcon[1].style.display = "block";
             lName.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -46,7 +45,7 @@ let fName = id("fname"),
             lName.style.border = "1px solid hsl(154, 59%, 51%)";
         }
     
-        if(email.value === "") {
+        if(email.value.trim() === "") {
             errorMsg[2].innerHTML = "Email can not be empty";
             failureIcon[2].style.display = "block";
             email.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -62,7 +61,7 @@ let fName = id("fname"),
             email.style.border = "1px solid hsl(154, 59%, 51%)";
         }
 
-        if(password.value === "") {
+        if(password.value.trim() === "") {
             errorMsg[3].innerHTML = "Password can not be empty";
             failureIcon[3].style.display = "block";
             password.style.border = "1px solid hsl(0, 100%, 74%)";
