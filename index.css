@@ -81,6 +81,7 @@ input[type=text], input[type=email], input[type=password] {
   cursor: pointer;
 }
 
+
 #register-second-text {
     font-size: 10px;
     text-align: center;
@@ -147,7 +148,7 @@ input[type=text], input[type=email], input[type=password] {
 
 #email-icon {
     position: absolute;
-    bottom: 330px;
+    bottom: 328px;
     right:  310px;
     display: none;
 }
